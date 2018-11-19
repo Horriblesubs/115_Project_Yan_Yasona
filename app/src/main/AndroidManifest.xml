@@ -24,6 +24,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".menuActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".regworkActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".custworkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
