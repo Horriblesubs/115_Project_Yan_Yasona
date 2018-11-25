@@ -23,7 +23,7 @@ public class menuActivity extends AppCompatActivity {
         tUser.setText(message);
     }
     public void regworkButton(View v){
-        Intent i = new Intent( this, regworkActivity.class);
+        Intent i = new Intent(this, regworkActivity.class);
         startActivity(i);
     }
     public void custworkButton(View v){

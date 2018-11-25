@@ -102,6 +102,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
+            android:onClick="beginButton"
             android:text="@string/beginner"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/textView21"

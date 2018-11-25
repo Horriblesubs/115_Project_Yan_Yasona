@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class regworkActivity extends AppCompatActivity {
     TextView tUser;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.regular_workout);
@@ -18,5 +19,13 @@ public class regworkActivity extends AppCompatActivity {
         String name = sp.getString("fname", "USER"); // s = key, s1 = defvalue
         String message = name;
         tUser.setText(message);
+    }
+    public void beginButton(View v){
+        Intent i = new Intent(this, listworkoutActivity.class);
+        startActivity(i);
+    }
+    public void custworkButton(View v){
+        Intent i = new Intent( this, custworkActivity.class);
+        startActivity(i);
     }
 }
