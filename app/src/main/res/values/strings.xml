@@ -6,8 +6,8 @@
     <string name="custom">Custom Workout</string>
     <string name="regular_desc">This is the generic workout for a regular person. You should be able to do this in an hour or less. The difficulty set in this workout can be done by most people, making it the best starter workout for a beginner.</string>
     <string name="custom_desc">This allows you to create your own workout. You will be able to set the kind of workout you must do, and the time you have to complete it. It will automatically compute the amount of work you have done. </string>
-    <string name="beginner">Beginner Workout</string>
-    <string name="intermediate">Intermediate Workout</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
     <string name="abreak">Take a break</string>
 
     <string name="stretches">Stretches</string>

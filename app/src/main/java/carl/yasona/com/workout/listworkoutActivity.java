@@ -28,7 +28,7 @@ public class listworkoutActivity extends AppCompatActivity {
         FileOutputStream fos = null;
         String work[] = new String[3];
         String newLine = System.getProperty("line.separator");
-        work = new String[] {"Push-Ups", "Pull-Ups", "Sit-Ups"};
+        work = new String[] {"Jumping Jacks", "Squats", "Sit-Ups", "Push-Ups", "Planking", "Stretching"};
         try {
             fos = openFileOutput("workout1.txt", MODE_PRIVATE);
             for(int i = 0; i <= 2; i++){
@@ -61,7 +61,9 @@ public class listworkoutActivity extends AppCompatActivity {
         }
     }
     public void beginworkButton(View v){
-        Intent i = new Intent(this, situpsActivity.class);
+        Intent i = new Intent(this, jumpingActivity.class);
         startActivity(i);
+
+
     }
 }
