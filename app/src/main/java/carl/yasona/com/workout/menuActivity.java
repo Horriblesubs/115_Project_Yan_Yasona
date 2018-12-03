@@ -27,7 +27,7 @@ public class menuActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void custworkButton(View v){
-        Intent i = new Intent( this, custworkActivity.class);
+        Intent i = new Intent( this, situpsActivity.class);
         startActivity(i);
     }
 }

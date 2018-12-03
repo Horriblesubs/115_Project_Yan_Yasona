@@ -16,7 +16,7 @@ import carl.yasona.com.workout.R;
 
 public class jumpingActivity extends AppCompatActivity{
     TextView countdownText;
-    private static final long START_TIME_IN_MILLIS = 30000;
+    private static final long START_TIME_IN_MILLIS = 3000;
     private Button mButtonNext;
     private CountDownTimer mCountDownTimer;
 
@@ -54,7 +54,8 @@ public class jumpingActivity extends AppCompatActivity{
         countdownText.setText(timeLeftFormatted);
     }
     public void jumpingNextAct(View v){
-        Intent i = new Intent(this, breaktimeActivity.class);
+        Intent i = new Intent(this, workoutLoader.class);
+        i.putExtra("tempWork","Jumping Jacks");
         startActivity(i);
     }
 }

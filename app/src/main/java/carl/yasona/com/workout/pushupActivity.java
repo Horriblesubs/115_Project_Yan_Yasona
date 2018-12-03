@@ -53,7 +53,8 @@ public class pushupActivity extends AppCompatActivity {
         countdownText.setText(timeLeftFormatted);
     }
     public void pushupNextAct(View v){
-        Intent i = new Intent(this, situpsActivity.class);
+        Intent i = new Intent(this, workoutLoader.class);
+        i.putExtra("tempWork","Push-Ups");
         startActivity(i);
     }
     }

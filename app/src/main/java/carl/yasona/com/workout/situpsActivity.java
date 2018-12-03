@@ -53,7 +53,8 @@ public class situpsActivity extends AppCompatActivity {
         countdownText.setText(timeLeftFormatted);
     }
     public void situpNextAct(View v){
-        Intent i = new Intent(this, jumpingActivity.class);
+        Intent i = new Intent(this, workoutLoader.class);
+        i.putExtra("tempWork","Sit-Ups");
         startActivity(i);
     }
 }
