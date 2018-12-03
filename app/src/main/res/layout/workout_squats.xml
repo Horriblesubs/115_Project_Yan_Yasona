@@ -16,16 +16,14 @@
             android:layout_height="300dp">
 
             <ImageView
-                android:id="@+id/imageView11"
+                android:id="@+id/imageView13"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/situps" />
+                app:srcCompat="@drawable/squat" />
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
@@ -35,9 +33,9 @@
             <TextView
                 android:id="@+id/currWorkout"
                 style="@style/Exercise__Style"
-                android:text="@string/sit_ups"
-                android:textColor="@android:color/black"
-                app:layout_constraintBottom_toTopOf="@+id/situpsNext"
+                android:text="@string/squats"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                app:layout_constraintBottom_toTopOf="@+id/squatsNext"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -46,7 +44,6 @@
             <Button
                 android:id="@+id/situpsNext"
                 style="@style/Next_Button"
-                android:onClick="situpNextAct"
                 android:text="@string/next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,13 +55,14 @@
             <TextView
                 android:id="@+id/CountdownTime"
                 style="@style/Timer_Style"
-                android:textColor="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/currWorkout"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                android:textColor="@android:color/black"
+                android:textSize="45sp" />
 
         </android.support.constraint.ConstraintLayout>
 

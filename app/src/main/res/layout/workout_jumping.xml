@@ -10,6 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="300dp">
 
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/jumping" />
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
@@ -18,34 +27,20 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="36dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="60dp"
+            style="@style/Exercise__Style"
             android:text="@string/jumping_jacks"
             android:textColor="@android:color/black"
-            android:textSize="50sp"
-            app:layout_constraintBottom_toTopOf="@+id/CountdownTime"
+            app:layout_constraintBottom_toTopOf="@+id/jumpNext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/jumpNext"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginLeft="250dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginStart="250dp"
+            style="@style/Next_Button"
             android:onClick="jumpingNextAct"
             android:text="@string/next"
-            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -53,19 +48,15 @@
 
         <TextView
             android:id="@+id/CountdownTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="141dp"
-            android:layout_marginLeft="141dp"
-            android:layout_marginRight="141dp"
-            android:layout_marginStart="141dp"
-            android:layout_marginTop="20dp"
+            style="@style/Timer_Style"
             android:textColor="@android:color/black"
             android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            app:layout_constraintTop_toBottomOf="@+id/textView18"
+            app:layout_constraintVertical_bias="0.0" />
     </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>

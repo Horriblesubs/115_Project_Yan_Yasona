@@ -15,10 +15,16 @@
     <string name="sit_ups">Sit-ups</string>
     <string name="jumping_jacks">Jumping Jacks</string>
     <string name="planking">Planking</string>
+    <string name="squats">Squats</string>
 
     <string name="next">Next</string>
     <string name="skip">Skip</string>
 
     <string name="empty">No custom workout</string>
     <string name="create">Create a New Workout</string>
+
+    <string name="congrats">Congratulations!</string>
+    <string name="con_sentence">You finished the </string>
+    <string name="main_menu">Main Menu</string>
+
 </resources>
