@@ -38,6 +38,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="46dp"
+        android:onClick="menuButton"
         android:text="@string/main_menu"
         android:textSize="40sp" />
 

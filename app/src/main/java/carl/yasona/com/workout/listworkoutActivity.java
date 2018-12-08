@@ -8,10 +8,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class listworkoutActivity extends AppCompatActivity {
     TextView work1;
@@ -20,15 +26,16 @@ public class listworkoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.workout_list);
         work1 = findViewById(R.id.work1);
-        createList();
-        loadList();
+        Bundle extras = getIntent().getExtras();
+        String workLevel = "";
+        if (extras != null) {
+            workLevel = extras.getString("workLevel");
+        }
+        createList(workLevel);
     }
-
-    public void createList() {
+    public void createList2(String [] work){
         FileOutputStream fos = null;
-        String work[] = new String[6];
         String newLine = System.getProperty("line.separator");
-        work = new String[] {"Jumping Jacks", "Squats", "Sit-Ups", "Push-Ups", "Planking", "Stretching"};
         try {
             fos = openFileOutput("workout1.txt", MODE_PRIVATE);
             for(int i = 0; i <= 5; i++){
@@ -44,6 +51,37 @@ public class listworkoutActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+        deleteTemp();
+        loadList();
+    }
+    public void createList(String workLevel) {
+        String work[] = new String[6];
+
+        if(workLevel.equals("Beginner")) {
+            work = new String[]{"Push-Ups", "Sit-Ups", "Jumping Jacks"};
+            createList2(work);
+        } else if (workLevel.equals("Intermediate")){
+            work = new String[]{"Push-Ups", "Sit-Ups", "Jumping Jacks", "Stretching", "Squats"};
+            createList2(work);
+        } else if (workLevel.equals("Custom1")){
+            File dir = getFilesDir();
+            File source = new File(dir, "customworkout1.txt");
+            File dest = new File(dir, "workout1.txt");
+            try {
+                custom1Load(source, dest);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        deleteTemp();
+        loadList();
+
+    }
+
+    public void deleteTemp(){
+        File dir = getFilesDir();
+        File file = new File(dir, "finish.txt");
+        boolean deleted = file.delete();
     }
     public void loadList() {
         try {
@@ -51,8 +89,12 @@ public class listworkoutActivity extends AppCompatActivity {
             BufferedReader br = new BufferedReader(new InputStreamReader(fin));
             String line;
             String entireFile = "";
+            ArrayList<String> lists= new ArrayList<String>();
             while((line = br.readLine()) != null) {
-                entireFile += (line + "\n");
+                lists.add(line);
+            }
+            for(String work: lists){
+                entireFile += (work + "\n");
             }
             work1.setText(entireFile);
 
@@ -60,6 +102,24 @@ public class listworkoutActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    private static void custom1Load(File source, File dest) throws IOException {
+        InputStream is = null;
+        OutputStream os = null;
+        try {
+            is = new FileInputStream(source);
+            os = new FileOutputStream(dest);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = is.read(buffer)) > 0) {
+                os.write(buffer, 0, length);
+            }
+        } finally {
+            is.close();
+            os.close();
+        }
+    }
+
     public void beginworkButton(View v){
         Intent i = new Intent(this, workoutLoader.class);
         i.putExtra("tempWork","Start");

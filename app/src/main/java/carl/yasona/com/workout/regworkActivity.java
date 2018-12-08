@@ -22,10 +22,12 @@ public class regworkActivity extends AppCompatActivity {
     }
     public void beginButton(View v){
         Intent i = new Intent(this, listworkoutActivity.class);
+        i.putExtra("workLevel","Beginner");
         startActivity(i);
     }
-    public void custworkButton(View v){
-        Intent i = new Intent( this, custworkActivity.class);
+    public void interButton(View v){
+        Intent i = new Intent( this, listworkoutActivity.class);
+        i.putExtra("workLevel","Intermediate");
         startActivity(i);
     }
 }

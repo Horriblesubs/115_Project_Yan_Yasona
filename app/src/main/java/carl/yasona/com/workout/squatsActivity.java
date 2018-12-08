@@ -1,8 +1,7 @@
 package carl.yasona.com.workout;
 
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -12,9 +11,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-import carl.yasona.com.workout.R;
-
-public class jumpingActivity extends AppCompatActivity{
+public class squatsActivity extends AppCompatActivity {
     TextView countdownText;
     private static final long START_TIME_IN_MILLIS = 30000;
     private Button mButtonNext;
@@ -22,11 +19,12 @@ public class jumpingActivity extends AppCompatActivity{
 
 
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.workout_jumping);
+        setContentView(R.layout.workout_squats);
         countdownText = findViewById(R.id.CountdownTime);
-        mButtonNext = findViewById(R.id.jumpNext);
+        mButtonNext = findViewById(R.id.squatsNext);
         startTimer();
     }
     private void startTimer() {
@@ -53,9 +51,11 @@ public class jumpingActivity extends AppCompatActivity{
 
         countdownText.setText(timeLeftFormatted);
     }
-    public void jumpingNextAct(View v){
+
+
+    public void squatsNextAct(View v){
         Intent i = new Intent(this, workoutLoader.class);
-        i.putExtra("tempWork","Jumping Jacks");
+        i.putExtra("tempWork","Squats");
         startActivity(i);
     }
 }

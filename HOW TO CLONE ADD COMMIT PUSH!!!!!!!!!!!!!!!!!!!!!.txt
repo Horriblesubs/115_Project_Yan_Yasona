@@ -1,1 +1,5 @@
 https://www.youtube.com/watch?v=5HLst694D_Y
+git status
+git add -A
+git commit -m "message"
+git push -u origin master

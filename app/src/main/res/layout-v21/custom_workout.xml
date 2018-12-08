@@ -75,7 +75,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/workout1"
             style="@android:style/Widget.Material.Light.Button.Inset"
             android:layout_width="0dp"
             android:layout_height="120dp"
@@ -85,11 +85,51 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
-            android:text="[Custom name]"
+            android:onClick="customwork1"
+            android:text="WORKOUT1"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/textView21"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/workout2"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="144dp"
+            android:text="WORKOUT2"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView21"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/workout3"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="221dp"
+            android:layout_height="103dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="280dp"
+            android:onClick="workAdd"
+            android:text="Add Workout"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView21"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
