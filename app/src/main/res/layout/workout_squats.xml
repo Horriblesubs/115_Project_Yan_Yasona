@@ -55,12 +55,16 @@
 
             <Button
                 android:id="@+id/squatsNext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="squatsNextAct"
-                android:text="Next"
-                tools:layout_editor_absoluteX="280dp"
-                tools:layout_editor_absoluteY="135dp" />
+                style="@style/Next_Button"
+                android:layout_marginTop="250dp"
+                android:onClick="situpNextAct"
+                android:text="@string/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
         </android.support.constraint.ConstraintLayout>
 
