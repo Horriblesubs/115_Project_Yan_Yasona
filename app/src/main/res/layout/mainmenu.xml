@@ -12,56 +12,42 @@
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
-            android:text="Welcome,"
-            android:textSize="40sp"
+            style="@style/welcome_sign"
+            android:text="@string/welcome"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/userName"
+            style="@style/username_sign"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView13"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="20dp"
+            style="@style/face_sign"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/userName"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/ic_launcher_round" />
 
         <View
             android:id="@+id/divider2"
-            android:layout_width="368dp"
-            android:layout_height="4dp"
+            style="@style/divider"
+            android:layout_marginTop="60dp"
             android:background="?android:attr/listDivider"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="90dp" />
-
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="141dp"
-            android:layout_height="57dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.518" />
+            app:layout_constraintVertical_bias="1.0" />
 
     </android.support.constraint.ConstraintLayout>
 
@@ -87,23 +73,23 @@
 
         <Button
             android:id="@+id/button2"
-            style="@android:style/Widget.Material.Light.Button.Inset"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            style="@style/mainmenu_button"
             android:onClick="regworkButton"
-            android:text="Regular Workout"
-            android:textSize="30sp"
+            android:text="@string/regular"
             app:layout_constraintBottom_toTopOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.195"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/mainmenu_button"
+            android:onClick="custworkButton"
+            android:text="@string/custom"
+            app:layout_constraintBottom_toTopOf="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <TextView
             android:id="@+id/textView15"
@@ -115,7 +101,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:text="This is the generic workout for a regular person. You should be able to do this in an hour or less. The difficulty set in this workout can be done by most people, making it the best starter workout for a beginner."
+            android:text="@string/regular_desc"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/button5"
@@ -123,26 +109,6 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-        <Button
-            android:id="@+id/button5"
-            style="@android:style/Widget.Material.Light.Button.Inset"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:onClick="custworkButton"
-            android:text="Custom Workout"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <TextView
             android:id="@+id/textView16"
@@ -154,7 +120,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:text="This allows you to create your own workout. You will be able to set the kind of workout you must do, and the time you have to complete it. It will automatically compute the amount of work you have done. "
+            android:text="@string/custom_desc"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -43,8 +43,9 @@
         <item name="android:layout_marginLeft">250dp</item>
         <item name="android:layout_marginRight">32dp</item>
         <item name="android:layout_marginStart">250dp</item>
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginTop">250dp</item>
         <item name="android:textSize">32sp</item>
+        <item name="android:text">@string/next</item>
     </style>
 
     <style name="con">
@@ -55,6 +56,108 @@
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_marginTop">179dp</item>
+    </style>
+
+    <style name="add">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">200dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">200dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">21dp</item>
+    </style>
+
+    <style name="add_button">
+        <item name="android:text">@string/add</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginStart">50dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_gen">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="welcome_sign">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="username_sign">
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">80dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginRight">80dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="face_sign">
+
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="mainmenu_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_width">368dp</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="gen_size">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:textSize">40dp</item>
     </style>
 
 
