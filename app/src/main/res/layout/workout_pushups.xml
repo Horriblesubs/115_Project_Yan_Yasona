@@ -48,9 +48,10 @@
 
         <Button
 
+            android:id="@+id/pushupNext"
             style="@style/Next_Button"
             android:layout_marginTop="250dp"
-            android:onClick="situpNextAct"
+            android:onClick="pushupNextAct"
             android:text="@string/next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
