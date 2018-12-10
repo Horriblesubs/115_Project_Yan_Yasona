@@ -41,7 +41,6 @@
         <View
             android:id="@+id/divider2"
             style="@style/divider"
-            android:layout_marginTop="60dp"
             android:background="?android:attr/listDivider"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -167,8 +166,12 @@
         <TextView
             android:id="@+id/workout_naming"
             style="@style/add"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:text="Workout Name:"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView33"
             app:layout_constraintVertical_bias="0.0" />
@@ -195,7 +198,7 @@
         <TextView
             android:id="@+id/workList"
             android:layout_width="199dp"
-            android:layout_height="128dp"
+            android:layout_height="95dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"

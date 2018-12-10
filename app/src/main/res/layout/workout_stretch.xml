@@ -56,6 +56,9 @@
         <Button
             android:id="@+id/stretchNext"
             style="@style/Next_Button"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="250dp"
             android:onClick="stretchNextAct"
             app:layout_constraintBottom_toBottomOf="parent"
