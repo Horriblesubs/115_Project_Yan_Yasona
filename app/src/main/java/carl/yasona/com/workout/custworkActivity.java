@@ -24,7 +24,7 @@ public class custworkActivity extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("data", MODE_PRIVATE);
         SharedPreferences sp2 = getSharedPreferences("data2", MODE_PRIVATE);
         String name = sp.getString("fname", "USER"); // s = key, s1 = defvalue
-        String exerName = sp2.getString("work1", "ADD WORKOUT");
+        String exerName = sp2.getString("work1", "NO WORKOUT");
         String message = name;
         tUser.setText(message);
         tButton1.setText(exerName);
